@@ -30,7 +30,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # ==================== CONSTANTS ====================
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-RIZER = "1.123.14"
+RIZER = "1.126.1"
 FREEFIRE_VERSION = "OB54"
 MAJOR_LOGIN_URL = "https://loginbp.ggblueshark.com/MajorLogin"
 INSPECT_URL = "https://100067.connect.garena.com/oauth/token/inspect"
@@ -258,7 +258,7 @@ def try_major_login(open_id: str, access_token: str, platform_type: int):
         "Content-Type": "application/x-www-form-urlencoded",
         "X-Unity-Version": "2018.4.11f1",
         "X-GA": "v1 1",
-        "ReleaseVersion": "OB53"
+        "ReleaseVersion": "OB54"
     }
     try:
         resp = requests.post(MAJOR_LOGIN_URL, data=encrypted_payload, headers=headers, verify=False, timeout=10)
